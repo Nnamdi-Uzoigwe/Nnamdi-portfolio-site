@@ -31,7 +31,7 @@ export default function About() {
   return (
     <div className="mt-10 z-40">
       <header>
-        <h2 className="text-xl lg:text-3xl font-semibold mb-4">About Me</h2>
+        <h2 className="text-xl lg:text-3xl font-semibold mb-3">About Me</h2>
         <p className="leading-7">
           I began my journey as a web developer in 2020, and since then, I've
           continued to grow and evolve as a developer, taking on new challenges
@@ -45,7 +45,7 @@ export default function About() {
         </p>
       </header>
 
-      <div className="pb-20 lg:pb-10">
+      <div className="pb-10">
         <h3 className="text-lg lg:text-2xl font-semibold mb-6">Skills & Expertise</h3>
 
         <div className="grid lg:grid-cols-2 gap-4 lg:gap-6">

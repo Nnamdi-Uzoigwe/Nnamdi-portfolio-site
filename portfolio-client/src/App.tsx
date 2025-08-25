@@ -15,7 +15,7 @@ function App() {
       <div className="absolute top-0 lg:top-20 right-0 w-64 h-64 bg-[#04910c] rounded-full blur-[200px] opacity-60"></div>
       <Router>
         <Sidebar />
-        <main className="w-full bg-[#1a1a1b] z-40 mt-0 lg:mt-[80px] ml-0 lg:ml-[290px] px-4 lg:px-8 rounded-[24px] border-1 border-[#737373]">
+        <main className="w-full bg-[#1a1a1b] z-40 mt-0 lg:mt-[80px] mb-20 lg:mb-0 ml-0 lg:ml-[290px] px-4 lg:px-8 rounded-[24px] border-1 border-[#737373]">
           <div className="flex justify-center">
             <Navigation />
           </div>
