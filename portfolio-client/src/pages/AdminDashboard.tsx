@@ -209,7 +209,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   const token = localStorage.getItem("token"); // get token from login
 
   try {
-    const res = await fetch("https://nnamdi-portfolio-three.vercel.app/api/projects", {
+    const res = await fetch("https://nnamdi-portfolio-site.onrender.com/api/projects", {
       method: "POST",
       body: formDataToSend,
       headers: {

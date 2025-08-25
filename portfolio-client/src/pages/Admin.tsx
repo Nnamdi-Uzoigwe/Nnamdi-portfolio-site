@@ -22,7 +22,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   try {
     // Send login request to backend
-    const res = await fetch("https://nnamdi-portfolio-three.vercel.app/api/admin/login", {
+    const res = await fetch("https://nnamdi-portfolio-site.onrender.com/api/admin/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

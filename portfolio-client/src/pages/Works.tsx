@@ -28,7 +28,7 @@ export default function Works() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch("https://nnamdi-portfolio-three.vercel.app/api/projects");
+        const res = await fetch("https://nnamdi-portfolio-site.onrender.com/api/projects");
         if (!res.ok) throw new Error("Failed to fetch projects");
 
         const data = await res.json();
