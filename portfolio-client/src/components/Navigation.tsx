@@ -17,7 +17,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Navigation() {
     return (
-        <div className="bg-[#373636] z-20 w-full lg:w-fit py-[24px] lg:py-[16px] border-1 border-[#737373] fixed bottom-0 lg:sticky flex justify-center lg:justify-start gap-2 lg:gap-10 rounded-b-0 lg:rounded-b-[12px] rounded-t-[12px] lg:rounded-t-[12px] px-[24px]">
+        <div className="cursor-pointer bg-[#373636] z-20 w-full lg:w-fit py-[24px] lg:py-[16px] border-1 border-[#737373] fixed bottom-0 lg:sticky flex justify-center lg:justify-start gap-2 lg:gap-10 rounded-b-0 lg:rounded-b-[12px] rounded-t-[12px] lg:rounded-t-[12px] px-[24px]">
             <NavLink 
                 to="/" 
                 end

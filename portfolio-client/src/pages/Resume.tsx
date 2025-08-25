@@ -40,6 +40,17 @@ export default function Resume() {
       level: "75%",
     },
   ];
+
+  const handleDownloadCV = () => {
+  // Create a temporary link element
+  const link = document.createElement('a');
+  link.href = '/UZOIGWE-NNAMDI-CV.pdf'; // Path to your CV in public folder
+  link.download = 'UZOIGWE-NNAMDI-CV.pdf'; // Name for downloaded file
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
   return (
     <div className="mt-10 z-40">
       <motion.div
@@ -170,7 +181,7 @@ export default function Resume() {
         </div>
       </motion.div>
       <div className="my-6 flex justify-end">
-        <button className="flex gap-2 py-3 px-4 rounded-xl cursor-pointer border-1 border-[#c6f8c8]">
+        <button onClick={handleDownloadCV} className="flex gap-2 py-3 px-4 rounded-xl cursor-pointer border-1 border-[#c6f8c8]">
           Download Resume
           <CloudDownload />
         </button>

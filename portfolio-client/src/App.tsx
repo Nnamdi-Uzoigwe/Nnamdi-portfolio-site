@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
 import AdminDashboard from "./pages/AdminDashboard";
 import ScrollToTop from "./components/ScrollToTop";
+import ProjectDetail from "./pages/ProjectDetail";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/works" element={<Works />} />
+            <Route path="/works/:id" element={<ProjectDetail />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin" element={<Admin />} />

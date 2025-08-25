@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Dropdown from "../components/Dropdown";
 import ProjectCard from "../components/ProjectCard";
 import { motion } from "framer-motion";
+import PortfolioLoading from "../components/PortfolioLoading";
 
 interface ProjectImage {
   url: string;
@@ -35,18 +36,22 @@ export default function Works() {
         if (!res.ok) throw new Error("Failed to fetch projects");
 
         const data = await res.json();
+console.log(data)
+        setTimeout(() => {
+          setProjects(data);
+          setLoading(false);
+        }, 3000);
+
         setProjects(data);
       } catch (err: any) {
         setError(err.message || "Something went wrong");
-      } finally {
-        setLoading(false);
       }
     };
 
     fetchProjects();
   }, []);
 
-  if (loading) return <div>Loading projects...</div>;
+  if (loading) return <PortfolioLoading />;
   if (error) return <div className="text-red-600">{error}</div>;
 
   return (
@@ -100,6 +105,7 @@ export default function Works() {
               name={project.name}
               brief={project.brief}
               image={project?.images[0].url}
+              id={project.id}
             />
           ))}
         </div>

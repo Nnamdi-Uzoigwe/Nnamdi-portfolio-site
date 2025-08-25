@@ -1,12 +1,14 @@
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import { Link } from "react-router-dom"
 interface ProjectCardProps {
     image: string,
     name: string,
-    brief: string
+    brief: string,
+    id: string
 }
 
-export default function ProjectCard({ image, name, brief }:ProjectCardProps) {
+export default function ProjectCard({ image, name, brief, id }:ProjectCardProps) {
     return (
         <motion.div
         initial={{ opacity: 0, y: 60 }}
@@ -30,7 +32,9 @@ export default function ProjectCard({ image, name, brief }:ProjectCardProps) {
                 <p className="text-sm">{brief}</p>
 
                 <div className="mt-10 flex justify-end">
-                    <button className="flex gap-2">View Details <ArrowRight /></button>
+                    <Link to={`/works/${id}`} >
+                        <button className="flex gap-2">View Details <ArrowRight /></button>
+                    </Link>
                 </div>
             </div>
         </div>

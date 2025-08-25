@@ -41,8 +41,13 @@ export default function Sidebar() {
           </div>
 
           <div className={`flex mt-3 gap-2 justify-start lg:justify-center`}>
-            <FaGithub className="text-[#ffdb46] cursor-pointer" />
-            <FaTwitter className="text-[#ffdb46] cursor-pointer" />
+            <a href="https://github.com/Nnamdi-Uzoigwe/">
+              <FaGithub className="text-[#ffdb46] cursor-pointer" />
+            </a>
+            <a href="https://x.com/Nnamdiuzo2">
+              <FaTwitter className="text-[#ffdb46] cursor-pointer" />
+            </a>
+            <a href="#"></a>
             <FaLinkedin className="text-[#ffdb46] cursor-pointer" />
           </div>
         </div>

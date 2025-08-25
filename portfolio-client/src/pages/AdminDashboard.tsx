@@ -124,60 +124,6 @@ const AdminDashboard: React.FC = () => {
     handleFileSelect(e.dataTransfer.files);
   };
 
-
-
-  // const handleSubmit = async () => {
-  //   if (!formData.name || !formData.brief || !formData.timeframe || !formData.tools || !formData.overview) {
-  //     showMessage('error', 'Please fill in all required fields.');
-  //     return;
-  //   }
-
-  //   if (selectedFiles.length === 0) {
-  //     showMessage('error', 'Please upload at least one project image.');
-  //     return;
-  //   }
-
-  //   setIsSubmitting(true);
-
-  //   try {
-  //     const imageDataUrls = await convertFilesToBase64(selectedFiles);
-      
-  //     const newProject: Project = {
-  //       id: Date.now(),
-  //       name: formData.name,
-  //       brief: formData.brief,
-  //       timeframe: formData.timeframe,
-  //       githubLink: formData.githubLink,
-  //       liveUrl: formData.liveUrl,
-  //       tools: formData.tools,
-  //       overview: formData.overview,
-  //       images: imageDataUrls,
-  //       dateAdded: new Date().toLocaleDateString()
-  //     };
-
-  //     const updatedProjects = [...projects, newProject];
-  //     setProjects(updatedProjects);
-  //     localStorage.setItem('portfolioProjects', JSON.stringify(updatedProjects));
-
-  //     // Reset form
-  //     setFormData({
-  //       name: '',
-  //       brief: '',
-  //       timeframe: '',
-  //       githubLink: '',
-  //       liveUrl: '',
-  //       tools: '',
-  //       overview: ''
-  //     });
-  //     setSelectedFiles([]);
-      
-  //     showMessage('success', 'Project added successfully!');
-  //   } catch (error) {
-  //     showMessage('error', 'Error adding project. Please try again.');
-  //   } finally {
-  //     setIsSubmitting(false);
-  //   }
-  // };
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
@@ -203,17 +149,17 @@ const handleSubmit = async (e: React.FormEvent) => {
   formDataToSend.append("overview", formData.overview);
 
   selectedFiles.forEach((file) => {
-    formDataToSend.append("images", file); // matches upload.array("images", 3) in backend
+    formDataToSend.append("images", file); 
   });
 
-  const token = localStorage.getItem("token"); // get token from login
+  const token = localStorage.getItem("token"); 
 
   try {
     const res = await fetch("https://nnamdi-portfolio-site.onrender.com/api/projects", {
       method: "POST",
       body: formDataToSend,
       headers: {
-        Authorization: `Bearer ${token}` // send token in header
+        Authorization: `Bearer ${token}`
       },
     });
 
@@ -221,7 +167,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
     if (res.ok) {
       showMessage("success", "Project added successfully!");
-      // reset form & selected files
+    
       setFormData({
         name: "",
         brief: "",
@@ -241,8 +187,6 @@ const handleSubmit = async (e: React.FormEvent) => {
     setIsSubmitting(false);
   }
 };
-
-
 
   const deleteProject = (id: number) => {
     if (window.confirm('Are you sure you want to delete this project?')) {
