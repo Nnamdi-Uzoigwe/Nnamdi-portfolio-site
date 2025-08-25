@@ -8,6 +8,7 @@ import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
 import AdminDashboard from "./pages/AdminDashboard";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/dashboard" element={<AdminDashboard />} />
           </Routes>
         </main>
+        <ScrollToTop />
       </Router>
     </div>
   );

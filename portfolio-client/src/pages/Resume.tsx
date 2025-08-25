@@ -1,5 +1,11 @@
-import { Atom, BriefcaseBusiness, CloudDownload, GraduationCap } from "lucide-react";
+import {
+  Atom,
+  BriefcaseBusiness,
+  CloudDownload,
+  GraduationCap,
+} from "lucide-react";
 import Progress from "../components/Progress";
+import { motion } from "framer-motion";
 
 export default function Resume() {
   const data = [
@@ -36,28 +42,69 @@ export default function Resume() {
   ];
   return (
     <div className="mt-10 z-40">
-      <header className="border-b-1 lg:border-b-0 pb-6 lg:pb-0 border-[#737373]">
-        <h2 className="text-xl lg:text-3xl font-semibold mb-3">Resume</h2>
-        <p className="">Skill level and technologies used</p>
-      </header>
-
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{
+          once: true,
+          amount: 0.1, // Lower threshold
+          margin: "100px", // Trigger earlier
+        }}
+        transition={{
+          duration: 0.8,
+          ease: [0.25, 0.46, 0.45, 0.94],
+        }}
+      >
+        <header className="border-b-1 lg:border-b-0 pb-6 lg:pb-0 border-[#737373]">
+          <h2 className="text-xl lg:text-3xl font-semibold mb-3">Resume</h2>
+          <p className="">Skill level and technologies used</p>
+        </header>
+      </motion.div>
       {/* Education */}
-      <div className="mt-10 ">
-        <div className="flex gap-3 items-center mb-4">
-          <GraduationCap className="text-[#ffdb46]" />
-          <h4 className="text-xl font-semibold">Education</h4>
-        </div>
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end">
-          <div>
-            <h5 className="text-[#888888]">B.Sc. Computer Science</h5>
-            <p>University of Calabar, Calabar, Cross River State, Nigeria</p>
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{
+          once: true,
+          amount: 0.1, // Lower threshold
+          margin: "100px", // Trigger earlier
+        }}
+        transition={{
+          duration: 0.8,
+          ease: [0.25, 0.46, 0.45, 0.94],
+        }}
+      >
+        
+        <div className="mt-10 ">
+          <div className="flex gap-3 items-center mb-4">
+            <GraduationCap className="text-[#ffdb46]" />
+            <h4 className="text-xl font-semibold">Education</h4>
           </div>
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end">
+            <div>
+              <h5 className="text-[#888888]">B.Sc. Computer Science</h5>
+              <p>University of Calabar, Calabar, Cross River State, Nigeria</p>
+            </div>
 
-          <div>2019 - 2025</div>
+            <div>2019 - 2025</div>
+          </div>
         </div>
-      </div>
-
+      </motion.div>
       {/* Skills */}
+
+       <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{
+          once: true,
+          amount: 0.1, // Lower threshold
+          margin: "100px", // Trigger earlier
+        }}
+        transition={{
+          duration: 0.8,
+          ease: [0.25, 0.46, 0.45, 0.94],
+        }}
+      >
       <div className="mt-10">
         <div className="flex gap-3 items-center mb-4">
           <Atom className="text-[#ffdb46]" />
@@ -73,7 +120,21 @@ export default function Resume() {
           ))}
         </div>
       </div>
+      </motion.div>
 
+ <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{
+          once: true,
+          amount: 0.1, // Lower threshold
+          margin: "100px", // Trigger earlier
+        }}
+        transition={{
+          duration: 0.8,
+          ease: [0.25, 0.46, 0.45, 0.94],
+        }}
+      >
       {/* Work Experience */}
       <div className="mt-10 pb-8 border-b-1 border-[#737373]">
         <div className="flex gap-3 items-center mb-4">
@@ -109,13 +170,13 @@ export default function Resume() {
         </div>
       </div>
 
-
       <div className="my-6 flex justify-end">
         <button className="flex gap-2 py-3 px-4 rounded-xl cursor-pointer border-1 border-[#c6f8c8]">
-            Download Resume 
-            <CloudDownload />
+          Download Resume
+          <CloudDownload />
         </button>
       </div>
+      </motion.div>
     </div>
   );
 }
