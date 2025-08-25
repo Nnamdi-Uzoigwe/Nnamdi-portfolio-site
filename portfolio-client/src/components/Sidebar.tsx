@@ -3,44 +3,64 @@ import { useState } from "react";
 import { Check, ChevronDown, Copy, Mail, Phone } from "lucide-react";
 
 export default function Sidebar() {
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
 
-  const handleOpen = () => {
-    setOpen(true)
-  }
+  const handleToggle = () => {
+    setOpen((prev) => !prev);
+  };
 
-  const handleCopy = async (text: string) => {
+  const handleCopy = async (value: string) => {
     try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000); 
+      await navigator.clipboard.writeText(value);
+      setCopied(value);
+      setTimeout(() => setCopied(null), 2000);
     } catch (err) {
       console.error("Copy failed:", err);
     }
   };
 
   return (
-    <div className="w-full lg:w-[280px] overflow-hidden mt-4 lg:mt-0 z-40 relative lg:fixed py-2 lg:py-0 px-8 left-0 lg:left-[190px] top-0 lg:top-[81px] flex flex-col justify-center items-center h-auto lg:h-[550px] rounded-[24px] border-1 border-[#737373] bg-[#1a1a1b]">
-      <div className=" overflow-hidden flex flex-col gap-2 lg:gap-0 items-center">
+    <div className="w-full lg:w-[280px] overflow-hidden mt-4 lg:mt-0 z-40 relative lg:fixed py-2 lg:py-0 px-4 lg:px-3 left-0 lg:left-[190px] top-0 lg:top-[81px] flex flex-col justify-center items-start lg:items-center h-auto lg:h-[550px] rounded-[24px] border-1 border-[#737373] bg-[#1a1a1b]">
+      <div className=" overflow-hidden pb-4 lg:pb-0 flex flex-row lg:flex-col gap-8 lg:gap-0 justify-center items-center">
         <div>
-        <img src="/myimg.jpeg" alt="" className="w-20 lg:w-50 h-20 lg:h-50 rounded-full"/>
+          <img
+            src="/myimg.jpeg"
+            alt=""
+            className="w-20 lg:w-50 h-20 lg:h-50 rounded-full"
+          />
         </div>
         <div>
+          <div>
+            <h3 className="text-lg lg:text-2xl font-semibold mt-4">
+              Nnamdi Uzoigwe
+            </h3>
+            <p className="text-[#737373] text-sm lg:text-md text-center">
+              Web & Mobile App Developer
+            </p>
+          </div>
 
-        <h3 className="text-lg lg:text-2xl font-semibold mt-4">Nnamdi Uzoigwe</h3>
-        <p className="text-[#737373] text-sm lg:text-md text-center">Web & Mobile App Developer</p>
-        </div>
-
-        <div className={`${open ? "flex" : "hidden"} lg:flex mt-3  gap-2`}>
-          <FaGithub className="text-[#ffdb46] cursor-pointer" />
-          <FaTwitter className="text-[#ffdb46] cursor-pointer" />
-          <FaLinkedin className="text-[#ffdb46] cursor-pointer" />
+          <div className={`flex mt-3 gap-2 justify-start lg:justify-center`}>
+            <FaGithub className="text-[#ffdb46] cursor-pointer" />
+            <FaTwitter className="text-[#ffdb46] cursor-pointer" />
+            <FaLinkedin className="text-[#ffdb46] cursor-pointer" />
+          </div>
         </div>
       </div>
 
-      <div className="mt-8 pt-8 border-t-2 border-[#737373] hidden lg:flex flex-col items-end gap-4">
-        <div className="flex items-end gap-3">
+      {/* <div className={`mt-8 pt-8 pb-4 lg:pb-0 border-t-2 w-full border-[#737373] transition-transform duration-400 ease-in-out ${open ? "flex" : "hidden"} lg:flex flex-col items-start lg:items-end gap-4`}> */}
+      <div
+ className={`mt-0 lg:mt-8 border-t-2 w-full border-[#737373] 
+  overflow-hidden transition-all duration-500 ease-in-out 
+  ${open 
+    ? "opacity-100 max-h-[500px] pt-3 pb-2" 
+    : "opacity-0 max-h-0 pt-0 pb-0"} 
+  lg:opacity-100 lg:max-h-none lg:pt-8 lg:pb-0 lg:flex flex-col items-start lg:items-end gap-4`}>
+ 
+
+        <div className="mb-2 lg:mb-0 flex justify-between lg:justify-center w-full items-end gap-3">
+          <div className="flex gap-2">
+
           <div className="bg-[#012204] flex justify-center items-center  h-10 w-10 rounded-[8px] border-1 border-[#04910c]">
             <Mail className="text-[#0A5D10]" />
           </div>
@@ -48,34 +68,43 @@ export default function Sidebar() {
             <h5 className="text-[15px]">EMAIL</h5>
             <p className="text-sm">uzonnamdi31@gmail.com</p>
           </div>
+          </div>
           <div
             className="cursor-pointer"
             onClick={() => handleCopy("uzonnamdi31@gmail.com")}
-          >
-            {copied ? <Check size={18} /> : <Copy size={18} />}
+            >
+            {copied === "uzonnamdi31@gmail.com" ? <Check size={18} /> : <Copy size={18} />}
           </div>
         </div>
         <div className="flex w-full gap-3 justify-between items-end">
-        <div className="flex gap-2">
-          <div className="bg-[#012204] h-10 w-10 rounded-[8px] flex justify-center items-center border-1 border-[#04910c]">
-            <Phone className="text-[#0A5D10]" />
+          <div className="flex gap-2">
+            <div className="bg-[#012204] h-10 w-10 rounded-[8px] flex justify-center items-center border-1 border-[#04910c]">
+              <Phone className="text-[#0A5D10]" />
+            </div>
+            <div>
+              <h5 className="text-[15px]">PHONE</h5>
+              <p className="text-sm">08160192784</p>
+            </div>
           </div>
-          <div>
-            <h5 className="text-[15px]">PHONE</h5>
-            <p className="text-sm">08160192784</p>
-          </div>
-        </div>
           <div
             className="cursor-pointer"
             onClick={() => handleCopy("08160192784")}
           >
-            {copied ? <Check size={18} /> : <Copy size={18} />}
+            {copied === "08160192784" ? <Check size={18} /> : <Copy size={18} />}
           </div>
         </div>
       </div>
 
-      <div onClick={handleOpen} className="flex absolute top-0 right-0 px-3 py-1 border-1 border-[#14ff1f] rounded-tr-lg lg:hidden bg-gradient-to-b from-[#09de13] to-[#ffcf07]">
-        <ChevronDown size={28} className="text-[#0b9012]" />
+      <div
+        onClick={handleToggle}
+        className="cursor-pointer flex absolute top-0 right-0 px-3 py-1 border-1 border-[#14ff1f] rounded-tr-lg lg:hidden bg-gradient-to-b from-[#165d19] to-[#967a09]"
+      >
+        <ChevronDown
+          size={28}
+          className={`text-[#18da21] transition-transform duration-300 ease-in-out ${
+            open ? "rotate-180" : "rotate-0"
+          }`}
+        />
       </div>
     </div>
   );

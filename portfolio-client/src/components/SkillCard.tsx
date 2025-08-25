@@ -13,7 +13,7 @@ export default function SkillCard({ title, url, description }: skillcardProps) {
       </div>
       <div>
         <h4 className="text-md lg:text-xl font-semibold">{title}</h4>
-        <p className="text-sm mt-2">{description}</p>
+        <p className="text-sm mt-2 text-gray-300">{description}</p>
       </div>
     </div>
   );

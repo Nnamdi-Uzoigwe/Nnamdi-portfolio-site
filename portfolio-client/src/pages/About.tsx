@@ -45,10 +45,10 @@ export default function About() {
         </p>
       </header>
 
-      <div className="pb-10">
+      <div className="pb-20 lg:pb-10">
         <h3 className="text-lg lg:text-2xl font-semibold mb-6">Skills & Expertise</h3>
 
-        <div className="grid lg:grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-2 gap-4 lg:gap-6">
         {data.map((item) => (
             <SkillCard 
                 key={item.id}
