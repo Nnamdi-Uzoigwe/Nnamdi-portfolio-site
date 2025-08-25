@@ -51,7 +51,7 @@ export default function Sidebar() {
       {/* <div className={`mt-8 pt-8 pb-4 lg:pb-0 border-t-2 w-full border-[#737373] transition-transform duration-400 ease-in-out ${open ? "flex" : "hidden"} lg:flex flex-col items-start lg:items-end gap-4`}> */}
       <div
  className={`mt-0 lg:mt-8 border-t-2 w-full border-[#737373] 
-  overflow-hidden transition-all duration-500 ease-in-out 
+  overflow-hidden transition-all duration-300 ease-in-out 
   ${open 
     ? "opacity-100 max-h-[500px] pt-3 pb-2" 
     : "opacity-0 max-h-0 pt-0 pb-0"} 
@@ -97,7 +97,7 @@ export default function Sidebar() {
 
       <div
         onClick={handleToggle}
-        className="cursor-pointer flex absolute top-0 right-0 px-3 py-1 border-1 border-[#14ff1f] rounded-tr-lg lg:hidden bg-gradient-to-b from-[#165d19] to-[#967a09]"
+        className="cursor-pointer flex absolute top-0 right-0 px-2 py-[3px] border-1 border-[#14ff1f] rounded-tr-lg rounded-bl-xl lg:hidden bg-gradient-to-b from-[#165d19] to-[#967a09]"
       >
         <ChevronDown
           size={28}
