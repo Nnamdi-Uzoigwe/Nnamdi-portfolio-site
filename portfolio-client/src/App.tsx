@@ -6,10 +6,12 @@ import About from "./pages/About";
 import Works from "./pages/Works";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
+import Admin from "./pages/Admin";
+import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {
   return (
-    <div className="px-2 lg:px-56 flex overflow-x-hidden flex-col lg:flex-row gap-2 lg:gap-8 bg-[#1a1a1b] text-white justify-center min-h-screen h-auto">
+    <div className="px-2 lg:px-56 flex overflow-x-hidden flex-col lg:flex-row gap-2 lg:gap-8 bg-[#1a1a1b] text-white justify-start lg:justify-center min-h-screen h-auto">
       <div className="hidden lg:block absolute top-40 left-[-190px] w-64 h-64 bg-[#04910c] rounded-full blur-[200px] opacity-60"></div>
       <div className="absolute top-0 lg:top-10 left-0 w-64 h-64 bg-[#04910c] rounded-full blur-[200px] opacity-60"></div>
       <div className="absolute top-0 lg:top-20 right-0 w-64 h-64 bg-[#04910c] rounded-full blur-[200px] opacity-60"></div>
@@ -24,6 +26,8 @@ function App() {
             <Route path="/works" element={<Works />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/dashboard" element={<AdminDashboard />} />
           </Routes>
         </main>
       </Router>
