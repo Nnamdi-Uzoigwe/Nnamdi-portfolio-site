@@ -14,7 +14,7 @@ export default function Contact() {
         </h1>
       </div>
 
-      <form className="bg-[#373636] p-6 rounded-[20px]">    
+      <form className="bg-[#373636] p-4 lg:p-6 rounded-[20px]">    
         <div className="w-full">
             <p className="mb-1 font-semibold">Full name</p>
             <input 

@@ -5,7 +5,7 @@ export default function Resume() {
   const data = [
     {
       id: 1,
-      technologies: "React.js/Next.js/Javascript",
+      technologies: "React.js/Next.js",
       level: "90%",
     },
     {
@@ -15,12 +15,12 @@ export default function Resume() {
     },
     {
       id: 3,
-      technologies: "Typescript",
+      technologies: "Typescript/Javascript",
       level: "70%",
     },
     {
       id: 4,
-      technologies: "TailwindCSS/Bootstrap/ShadcnUI",
+      technologies: "TailwindCSS/ShadcnUI",
       level: "85%",
     },
     {
@@ -30,13 +30,13 @@ export default function Resume() {
     },
     {
       id: 6,
-      technologies: "React-Native/NativeWind",
+      technologies: "React-Native",
       level: "75%",
     },
   ];
   return (
     <div className="mt-10 z-40">
-      <header className="border-b-1 lg:border-b-0 pb-6 lg:pb-0 border-[#888888]">
+      <header className="border-b-1 lg:border-b-0 pb-6 lg:pb-0 border-[#737373]">
         <h2 className="text-xl lg:text-3xl font-semibold mb-3">Resume</h2>
         <p className="">Skill level and technologies used</p>
       </header>
@@ -47,7 +47,7 @@ export default function Resume() {
           <GraduationCap className="text-[#ffdb46]" />
           <h4 className="text-xl font-semibold">Education</h4>
         </div>
-        <div className="flex justify-between items-end">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end">
           <div>
             <h5 className="text-[#888888]">B.Sc. Computer Science</h5>
             <p>University of Calabar, Calabar, Cross River State, Nigeria</p>
@@ -63,7 +63,7 @@ export default function Resume() {
           <Atom className="text-[#ffdb46]" />
           <h4 className="text-xl font-semibold">Skills</h4>
         </div>
-        <div className="bg-[#373636] border-1 border-[#888888] rounded-[16px] p-6">
+        <div className="bg-[#373636] border-1 border-[#888888] rounded-[16px] p-4 lg:p-6">
           {data.map((item) => (
             <Progress
               key={item.id}
@@ -75,13 +75,13 @@ export default function Resume() {
       </div>
 
       {/* Work Experience */}
-      <div className="mt-10 pb-8 border-b-1 border-[#888888]">
+      <div className="mt-10 pb-8 border-b-1 border-[#737373]">
         <div className="flex gap-3 items-center mb-4">
           <BriefcaseBusiness className="text-[#ffdb46]" />
           <h4 className="text-xl font-semibold">Work Experience</h4>
         </div>
 
-        <div className="flex justify-between items-end">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end">
           <div>
             <h5 className="text-[#888888]">Frontend Developer (Remote)</h5>
             <p>Cyber Technologies Ltd</p>
@@ -90,7 +90,7 @@ export default function Resume() {
           <div className="text-[#888888]">2023 - present</div>
         </div>
 
-        <div className="mt-4 flex justify-between items-end">
+        <div className="mt-4 flex flex-col lg:flex-row justify-between items-start lg:items-end">
           <div>
             <h5 className="text-[#888888]">Frontend Web Developer </h5>
             <p>Firsta Technologies, Calabar</p>
@@ -99,7 +99,7 @@ export default function Resume() {
           <div className="text-[#888888]">2022 - 2023</div>
         </div>
 
-        <div className="mt-4 flex justify-between items-end">
+        <div className="mt-4 flex flex-col lg:flex-row justify-between items-start lg:items-end">
           <div>
             <h5 className="text-[#888888]">Developer & Tutor</h5>
             <p>Arvys Technologies, Calabar</p>
