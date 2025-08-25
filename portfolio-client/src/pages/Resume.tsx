@@ -74,7 +74,6 @@ export default function Resume() {
           ease: [0.25, 0.46, 0.45, 0.94],
         }}
       >
-        
         <div className="mt-10 ">
           <div className="flex gap-3 items-center mb-4">
             <GraduationCap className="text-[#ffdb46]" />
@@ -92,7 +91,7 @@ export default function Resume() {
       </motion.div>
       {/* Skills */}
 
-       <motion.div
+      <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{
@@ -105,24 +104,24 @@ export default function Resume() {
           ease: [0.25, 0.46, 0.45, 0.94],
         }}
       >
-      <div className="mt-10">
-        <div className="flex gap-3 items-center mb-4">
-          <Atom className="text-[#ffdb46]" />
-          <h4 className="text-xl font-semibold">Skills</h4>
+        <div className="mt-10">
+          <div className="flex gap-3 items-center mb-4">
+            <Atom className="text-[#ffdb46]" />
+            <h4 className="text-xl font-semibold">Skills</h4>
+          </div>
+          <div className="bg-[#373636] border-1 border-[#888888] rounded-[16px] p-4 lg:p-6">
+            {data.map((item) => (
+              <Progress
+                key={item.id}
+                technology={item.technologies}
+                level={item.level}
+              />
+            ))}
+          </div>
         </div>
-        <div className="bg-[#373636] border-1 border-[#888888] rounded-[16px] p-4 lg:p-6">
-          {data.map((item) => (
-            <Progress
-              key={item.id}
-              technology={item.technologies}
-              level={item.level}
-            />
-          ))}
-        </div>
-      </div>
       </motion.div>
 
- <motion.div
+      <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{
@@ -135,48 +134,47 @@ export default function Resume() {
           ease: [0.25, 0.46, 0.45, 0.94],
         }}
       >
-      {/* Work Experience */}
-      <div className="mt-10 pb-8 border-b-1 border-[#737373]">
-        <div className="flex gap-3 items-center mb-4">
-          <BriefcaseBusiness className="text-[#ffdb46]" />
-          <h4 className="text-xl font-semibold">Work Experience</h4>
-        </div>
-
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end">
-          <div>
-            <h5 className="text-[#888888]">Frontend Developer (Remote)</h5>
-            <p>Cyber Technologies Ltd</p>
+        {/* Work Experience */}
+        <div className="mt-10 pb-8 border-b-1 border-[#737373]">
+          <div className="flex gap-3 items-center mb-4">
+            <BriefcaseBusiness className="text-[#ffdb46]" />
+            <h4 className="text-xl font-semibold">Work Experience</h4>
           </div>
 
-          <div className="text-[#888888]">2023 - present</div>
-        </div>
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end">
+            <div>
+              <h5 className="text-[#888888]">Frontend Developer (Remote)</h5>
+              <p>Cyber Technologies Ltd</p>
+            </div>
 
-        <div className="mt-4 flex flex-col lg:flex-row justify-between items-start lg:items-end">
-          <div>
-            <h5 className="text-[#888888]">Frontend Web Developer </h5>
-            <p>Firsta Technologies, Calabar</p>
+            <div className="text-[#888888]">2023 - present</div>
           </div>
 
-          <div className="text-[#888888]">2022 - 2023</div>
-        </div>
+          <div className="mt-4 flex flex-col lg:flex-row justify-between items-start lg:items-end">
+            <div>
+              <h5 className="text-[#888888]">Frontend Web Developer </h5>
+              <p>Firsta Technologies, Calabar</p>
+            </div>
 
-        <div className="mt-4 flex flex-col lg:flex-row justify-between items-start lg:items-end">
-          <div>
-            <h5 className="text-[#888888]">Developer & Tutor</h5>
-            <p>Arvys Technologies, Calabar</p>
+            <div className="text-[#888888]">2022 - 2023</div>
           </div>
 
-          <div className="text-[#888888]">2021 - 2022</div>
-        </div>
-      </div>
+          <div className="mt-4 flex flex-col lg:flex-row justify-between items-start lg:items-end">
+            <div>
+              <h5 className="text-[#888888]">Developer & Tutor</h5>
+              <p>Arvys Technologies, Calabar</p>
+            </div>
 
+            <div className="text-[#888888]">2021 - 2022</div>
+          </div>
+        </div>
+      </motion.div>
       <div className="my-6 flex justify-end">
         <button className="flex gap-2 py-3 px-4 rounded-xl cursor-pointer border-1 border-[#c6f8c8]">
           Download Resume
           <CloudDownload />
         </button>
       </div>
-      </motion.div>
     </div>
   );
 }

@@ -52,18 +52,18 @@ export default function Works() {
   return (
     <div className="mt-10 pb-10">
       <motion.div
-  initial={{ opacity: 0, y: 60 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ 
-    once: true, 
-    amount: 0.1,  // Lower threshold
-    margin: "100px"  // Trigger earlier
-  }}
-  transition={{ 
-    duration: 0.8,
-    ease: [0.25, 0.46, 0.45, 0.94]
-  }}
->
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{
+          once: true,
+          amount: 0.1, // Lower threshold
+          margin: "100px", // Trigger earlier
+        }}
+        transition={{
+          duration: 0.8,
+          ease: [0.25, 0.46, 0.45, 0.94],
+        }}
+      >
         <header className="mb-6 flex flex-col lg:flex-row justify-between gap-8 items-end">
           <div className="w-full lg:w-4/7">
             <h2 className="text-xl lg:text-3xl font-semibold mb-3">
@@ -80,30 +80,30 @@ export default function Works() {
         </header>
       </motion.div>
 
- <motion.div
-  initial={{ opacity: 0, y: 60 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ 
-    once: true, 
-    amount: 0.1,  // Lower threshold
-    margin: "100px"  // Trigger earlier
-  }}
-  transition={{ 
-    duration: 0.8,
-    ease: [0.25, 0.46, 0.45, 0.94]
-  }}
->
-      <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-3">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            name={project.name}
-            brief={project.brief}
-            image={project?.images[0].url}
-          />
-        ))}
-      </div>
-  </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{
+          once: true,
+          amount: 0.1, // Lower threshold
+          margin: "100px", // Trigger earlier
+        }}
+        transition={{
+          duration: 0.8,
+          ease: [0.25, 0.46, 0.45, 0.94],
+        }}
+      >
+        <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-3">
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              name={project.name}
+              brief={project.brief}
+              image={project?.images[0].url}
+            />
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 }
