@@ -123,7 +123,7 @@ const ProjectDetails = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="mt-10 max-w-6xl mx-auto ">
+      <div className="mt-10 max-w-6xl mb-10 mx-auto ">
         {/* Back Button */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -291,7 +291,7 @@ const ProjectDetails = () => {
 
         {/* Related Projects */}
         <motion.div
-          className="pt-12 border-t border-gray-800"
+          className="pt-12 border-t border-gray-800 pb-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
