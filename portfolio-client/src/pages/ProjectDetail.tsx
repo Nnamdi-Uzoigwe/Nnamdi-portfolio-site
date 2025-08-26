@@ -118,12 +118,12 @@ const ProjectDetails = () => {
 
   return (
     <motion.div
-      className="min-h-screen bg-[#1a1a1b] text-white"
+      className=" min-h-screen bg-[#1a1a1b] text-white"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="mt-10 max-w-6xl mb-10 mx-auto ">
+      <div className="mt-10 max-w-6xl mx-auto ">
         {/* Back Button */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}

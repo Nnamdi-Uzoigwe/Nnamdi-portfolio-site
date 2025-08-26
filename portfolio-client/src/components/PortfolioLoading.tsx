@@ -51,7 +51,7 @@ const PortfolioLoading = () => {
     <div className="min-h-screen bg-[#1a1a1b] text-white p-4 lg:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="flex justify-between items-start mb-8">
+        <div className="flex justify-between items-start gap-2 mb-8">
           <div>
             {/* Portfolio Title */}
             <SkeletonBox className="h-12 w-64 mb-4" />
