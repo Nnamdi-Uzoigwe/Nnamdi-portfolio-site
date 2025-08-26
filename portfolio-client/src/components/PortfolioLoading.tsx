@@ -20,7 +20,7 @@ const PortfolioLoading = () => {
   );
 
   const ProjectCardSkeleton = () => (
-    <div className="bg-[#373636] rounded-xl p-6">
+    <div className="bg-[#373636] rounded-xl w-full p-6">
       {/* Project Image */}
       <SkeletonBox 
         className="w-full rounded-xl mb-6" 
@@ -56,11 +56,11 @@ const PortfolioLoading = () => {
             {/* Portfolio Title */}
             <SkeletonBox className="h-12 w-64 mb-4" />
             {/* Subtitle */}
-            <SkeletonBox className="h-6 w-96" />
+            <SkeletonBox className="h-6 w-60 lg:w-96" />
           </div>
           
           {/* Filter Dropdown */}
-          <SkeletonBox className="h-12 w-32 rounded-lg" />
+          <SkeletonBox className="h-12 w-28 lg:w-32 rounded-lg" />
         </div>
         
         {/* Projects Grid */}

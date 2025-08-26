@@ -98,7 +98,7 @@ console.log(data)
           ease: [0.25, 0.46, 0.45, 0.94],
         }}
       >
-        <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-3">
+        <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-6">
           {projects.map((project) => (
             <ProjectCard
               key={project.id}
