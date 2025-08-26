@@ -156,16 +156,16 @@ const ProjectDetails = () => {
             <p className="text-lg text-gray-300 leading-relaxed mb-8">
               {project.brief}
             </p>
-
             {/* Project Meta Info */}
-            <div className="flex flex-wrap gap-6 mb-8">
-              <div className="flex items-center gap-2">
-                {project.tools?.map((item) => (
-                  <div className="p-2 bg-[#b0b0b0] text-[#737373] font-semibold rounded-[20px] text-sm">
-                    {item}
-                  </div>
-                ))}
-              </div>
+            <div className="flex flex-wrap gap-6 mb-8 justify-center">
+              {project.tools?.map((item, index) => (
+                <div
+                  key={index}
+                  className="p-2 bg-[#b0b0b0] text-[#737373] font-semibold rounded-[20px] text-sm"
+                >
+                  {item}
+                </div>
+              ))}
             </div>
 
             <div className="flex justify-center gap-10 items-center">

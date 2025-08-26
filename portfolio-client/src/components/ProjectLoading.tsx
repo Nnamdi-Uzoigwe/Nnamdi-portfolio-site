@@ -34,7 +34,7 @@ const ProjectLoading = () => {
         >
           <header className="mt-14 flex flex-col items-center">
             {/* Title Skeleton */}
-            <div className="h-12 w-96 bg-gray-700 rounded animate-pulse mb-6"></div>
+            <div className="h-12 w-60 lg:w-96 bg-gray-700 rounded animate-pulse mb-6"></div>
             
             {/* Brief Skeleton */}
             <div className="h-6 w-3/4 bg-gray-700 rounded animate-pulse mb-8"></div>
