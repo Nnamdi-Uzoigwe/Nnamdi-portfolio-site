@@ -17,12 +17,6 @@ export default function Dropdown({
   const [selectedOption, setSelectedOption] = useState<string>(defaultValue);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-//   const options = [
-//     'All',
-//     'Website Design',
-//     'Mobile App Development'
-//   ];
-
   const handleOptionClick = (option: string): void => {
     setSelectedOption(option);
     setIsOpen(false);
