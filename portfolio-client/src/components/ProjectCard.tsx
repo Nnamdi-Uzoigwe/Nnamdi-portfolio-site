@@ -42,7 +42,7 @@ export default function ProjectCard({
 
           <div className="mt-10 flex justify-end">
             <Link to={`/works/${id}`}>
-              <button className="flex gap-2 rounded-[30px] cursor-pointer hover:bg-gradient-to-r from-[#e69534] to-[#503401] py-3 px-4 border-1 border-[#c6f8c8]">
+              {/* <button className="flex gap-2 rounded-[30px] cursor-pointer bg-gradient-to-r from-[#e69534] to-[#503401] lg:hover:bg-gradient-to-r lg:hover:from-[#e69534] lg:hover:to-[#503401] py-3 px-4 border-1 border-[#c6f8c8]"> */}<button className="flex gap-2 rounded-[30px] cursor-pointer bg-gradient-to-r from-[#e69534] to-[#503401] lg:bg-none lg:hover:bg-gradient-to-r lg:hover:from-[#e69534] lg:hover:to-[#503401] py-3 px-4 border-1 border-[#c6f8c8]">
                 View Details <ArrowRight />
               </button>
             </Link>
