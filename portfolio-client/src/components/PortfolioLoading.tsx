@@ -46,9 +46,8 @@ const PortfolioLoading = () => {
       </div>
     </div>
   );
-
   return (
-    <div className="min-h-screen bg-[#1a1a1b] text-white p-4 lg:p-8">
+    <div className="min-h-screen  text-white p-4 lg:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="flex justify-between items-start gap-2 mb-8">

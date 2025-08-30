@@ -41,14 +41,15 @@ export default function Sidebar() {
           </div>
 
           <div className={`flex mt-3 gap-2 justify-start xl:justify-center`}>
-            <a href="https://github.com/Nnamdi-Uzoigwe/">
+            <a href="https://github.com/Nnamdi-Uzoigwe/" className="hover:-translate-y-2 transform transition duration-300 ease-in-out">
               <FaGithub className="text-[#ffdb46] cursor-pointer" />
             </a>
-            <a href="https://x.com/Nnamdiuzo2">
+            <a href="https://x.com/Nnamdiuzo2" className="hover:-translate-y-2 transform transition duration-300 ease-in-out">
               <FaTwitter className="text-[#ffdb46] cursor-pointer" />
             </a>
-            <a href="#"></a>
-            <FaLinkedin className="text-[#ffdb46] cursor-pointer" />
+            <a href="https://nnamdiuzoigwedev.vercel.app" className="hover:-translate-y-2 transform transition duration-300 ease-in-out">
+              <FaLinkedin className="text-[#ffdb46] cursor-pointer" />
+            </a>
           </div>
         </div>
       </div>
