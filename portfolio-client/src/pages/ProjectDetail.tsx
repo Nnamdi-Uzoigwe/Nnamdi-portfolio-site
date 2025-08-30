@@ -161,13 +161,14 @@ const ProjectDetails = () => {
               {project.tools?.map((item, index) => (
                 <div
                   key={index}
-                  className="p-2 bg-[#b0b0b0] text-[#737373] font-semibold rounded-[20px] text-sm"
+                  className="p-2 bg-[#d8d5d5] text-[#737373] font-semibold rounded-[20px] text-sm"
                 >
                   {item}
                 </div>
               ))}
             </div>
 
+                {/* make it dynamic later for mobile app */}
             <div className="flex justify-center gap-10 items-center">
               <div className="flex gap-2">
                 <BriefcaseBusiness className="text-gray-300" />

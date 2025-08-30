@@ -4,7 +4,7 @@ import { ChevronsRight } from "lucide-react";
 const ProjectLoading = () => {
   return (
     <motion.div
-      className="min-h-screen bg-[#1a1a1b] text-white"
+      className="min-h-screen text-white"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
