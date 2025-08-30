@@ -251,7 +251,7 @@ const ProjectDetails = () => {
         >
           <h2 className="text-2xl font-bold mb-6 text-gray-300">Overview</h2>
           <div>
-            <p className="text-gray-300 text-sm lg:text-lg leading-relaxed whitespace-pre-line text-justify">
+            <p className="text-gray-300 text-md lg:text-lg leading-relaxed whitespace-pre-line text-justify">
               {project.overview}
             </p>
           </div>
