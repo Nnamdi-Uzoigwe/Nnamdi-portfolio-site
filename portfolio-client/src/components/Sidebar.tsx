@@ -21,7 +21,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="w-full xl:w-[280px] overflow-hidden mt-4 xl:mt-0 z-40 relative xl:fixed py-2 lg:py-0 px-4 lg:px-3 left-0 xl:left-[140px] top-0 xl:top-[81px] flex flex-col justify-center items-start xl:items-center h-auto xl:h-[550px] rounded-[24px] border-1 border-[#737373] bg-black">
+    <div className="w-full xl:w-[280px] overflow-hidden mt-4 xl:mt-0 z-40 relative xl:fixed py-2 lg:py-0 px-4 lg:px-3 left-0 xl:left-[140px] top-0 xl:top-[81px] flex flex-col justify-center items-start xl:items-center h-auto xl:h-[550px] rounded-[24px] border-1 border-[#737373] bg-[#1a1a1b]">
       <div className=" overflow-hidden pb-4 xl:pb-0 flex flex-row xl:flex-col gap-8 xl:gap-0 justify-center items-center">
         <div>
           <img

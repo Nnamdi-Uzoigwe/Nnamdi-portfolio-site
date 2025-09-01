@@ -13,13 +13,13 @@ import ProjectDetail from "./pages/ProjectDetail";
 // bg-[#1a1a1b]
 function App() {
   return (
-    <div className="px-2 lg:px-20 xl:px-36 flex overflow-x-hidden flex-col xl:flex-row gap-2 xl:gap-8 bg-black text-white justify-start xl:justify-center min-h-screen h-auto">
+    <div className="px-2 lg:px-20 xl:px-36 flex overflow-x-hidden flex-col xl:flex-row gap-2 xl:gap-8 bg-[#1a1a1b] text-white justify-start xl:justify-center min-h-screen h-auto">
       <div className="hidden xl:block absolute top-40 left-[-190px] w-64 h-64 bg-[#04910c] rounded-full blur-[200px] opacity-60"></div>
       <div className="absolute top-0 xl:top-10 left-0 w-64 h-64 bg-[#04910c] rounded-full blur-[200px] opacity-60"></div>
       <div className="absolute top-0 xl:top-20 right-0 w-64 h-64 bg-[#04910c] rounded-full blur-[200px] opacity-60"></div>
       <Router>
         <Sidebar />
-        <main className="w-full bg-black h-fit z-40 mt-0 xl:mt-[80px] mb-20 xl:mb-10 ml-0 xl:ml-[290px] px-4 xl:px-8 rounded-[24px] border-1 border-[#737373]">
+        <main className="w-full bg-[#1a1a1b] h-fit z-40 mt-0 xl:mt-[80px] mb-20 xl:mb-10 ml-0 xl:ml-[290px] px-4 xl:px-8 rounded-[24px] border-1 border-[#737373]">
           <div className="flex justify-center">
             <Navigation />
           </div>
