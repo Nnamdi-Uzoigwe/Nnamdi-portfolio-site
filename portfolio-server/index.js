@@ -21,7 +21,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ["https://nnamdiuzoigwedev.vercel.app", "http://localhost:5173"],  // your frontend URL
+  origin: ["https://nnamdiuzoigwedev.vercel.app", "https://nnamdi-dev.vercel.app", "http://localhost:5173", "http://localhost:3000"],  // your frontend URL
   credentials: true,  // allow cookies / auth headers
 }));    
 app.use(express.json({ limit: '10mb' }));
